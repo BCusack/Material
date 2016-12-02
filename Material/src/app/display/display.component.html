@@ -1,8 +1,7 @@
 
 <app-toolbar></app-toolbar>
-
-
   <md-card id="top-div" >
+    <md-card-header  >Roll Calculation</md-card-header>
     <md-input #diameter type="number" placeholder="Roll Diameter" align="centre">
       <span md-suffix>mm</span>
     </md-input>
@@ -12,17 +11,13 @@
     <md-input #height placeholder="Sheet Thickess" type="number" align="middle">
       <span md-suffix>mm</span>
     </md-input>
- 
   <div>
-    <!-- hide if no value -->
     <md-input #result class="output" type="number" placeholder="Result" align="middle" [readonly]="true" value="{{LengthCalculate(diameter.value,height.value,core.value)}}">
       <span md-suffix>m</span></md-input>
   </div>
    </md-card>
 <md-card>
-  <div>
-   <md-card class="button-card" color="primary">PRIMARY RAISED</md-card></div>
-  
+   <md-card-header  >Sheet Calculation</md-card-header>
  <md-input #length type="number" placeholder="Sheet Length" align="centre">
       <span md-suffix>mm</span>
     </md-input>

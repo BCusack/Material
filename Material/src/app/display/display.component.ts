@@ -31,7 +31,7 @@ export class DisplayComponent {
   }
 VolumeCalculate(length,width){
 
-  this.result = length*width;
+  this.result = width/length;
   
   return this.result;
 }
