@@ -1,0 +1,42 @@
+
+<app-toolbar></app-toolbar>
+
+
+  <md-card id="top-div" >
+    <md-input #diameter type="number" placeholder="Roll Diameter" align="centre">
+      <span md-suffix>mm</span>
+    </md-input>
+     <md-input #core placeholder="Core Diameter" type="number" align="middle">
+      <span md-suffix>mm</span>
+    </md-input>
+    <md-input #height placeholder="Sheet Thickess" type="number" align="middle">
+      <span md-suffix>mm</span>
+    </md-input>
+ 
+  <div>
+    <!-- hide if no value -->
+    <md-input #result class="output" type="number" placeholder="Result" align="middle" [readonly]="true" value="{{LengthCalculate(diameter.value,height.value,core.value)}}">
+      <span md-suffix>m</span></md-input>
+  </div>
+   </md-card>
+<md-card>
+  <div>
+   <md-card class="button-card" color="primary">PRIMARY RAISED</md-card></div>
+  
+ <md-input #length type="number" placeholder="Sheet Length" align="centre">
+      <span md-suffix>mm</span>
+    </md-input>
+     <md-input  #width placeholder="Sheet width" type="number" align="middle">
+      <span md-suffix>mm</span>
+    </md-input>
+    <div>
+     <md-input #Sheetresult class="output" type="number" placeholder="Result" align="middle" [readonly]="true" value="{{VolumeCalculate(result.value,width.value)}}"></md-input>
+    </div>
+</md-card>
+  <div>
+     
+   
+  </div>
+
+
+ 

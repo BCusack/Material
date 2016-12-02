@@ -1,0 +1,11 @@
+#top-div{margin-top: 15px}
+
+.display-component{padding: 20px}
+
+md-input{margin-right:10px}
+
+md-card {
+  margin: 20px;
+}
+.button-card{background-color:#673ab7;
+    color: rgba(255, 255, 255, 0.87) }
