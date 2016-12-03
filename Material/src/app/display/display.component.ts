@@ -13,7 +13,7 @@ export class DisplayComponent {
   core: number;
   Length: number;
   thickness: number;
-
+  volume: number;
 
 
   constructor() {
@@ -21,6 +21,7 @@ export class DisplayComponent {
     this.diameter = 0;
     this.core = 0;
     this.thickness = 0;
+    this.volume  = 0;
   }
   // calculates the length of peel based on diameter and thickness
   LengthCalculate(diameter, thickness, core) {
@@ -29,10 +30,17 @@ export class DisplayComponent {
 
     return this.Length.toFixed(3);
   }
-VolumeCalculate(length,width){
+
+NumberOfSheets(length,width){
 
   this.result = width/length;
   
-  return this.result;
+  return this.result.toFixed(0);
+}
+Volume(Length,width,Thickess,Sheetresult){
+
+this.volume = (length*width*Thickess)*Sheetresult;
+
+return this.volume.toFixed(0);
 }
 }
