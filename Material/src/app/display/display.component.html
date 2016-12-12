@@ -1,39 +1,38 @@
 <app-toolbar>
 </app-toolbar>
+<md-card-content class="md-padding" layout-xs="column" layout="row">
 
-<md-card id="top-div">
-  <md-card-header>Roll Calculation</md-card-header>
-  <md-input #diameter type="number" placeholder="Roll Diameter" align="centre">
-    <span md-suffix>mm</span>
-  </md-input>
-  <md-input #core placeholder="Core Diameter" type="number" align="middle">
-    <span md-suffix>mm</span>
-  </md-input>
-  <md-input #height placeholder="Sheet Thickess" type="number" align="middle">
-    <span md-suffix>mm</span>
-  </md-input>
-  <div>
+  <md-card>
+    <md-card-header>Roll Calculation</md-card-header>
+    <md-input #diameter type="number" placeholder="Roll Diameter" align="centre">
+
+    </md-input>
+    <md-input #core placeholder="Core Diameter" type="number" align="middle">
+
+    </md-input>
+    <md-input #height placeholder="Sheet Thickess" type="number" align="middle">
+
+    </md-input>
+
     <md-input #result class="output" type="number" placeholder="Result" align="middle" [readonly]="true" value="{{LengthCalculate(diameter.value,height.value,core.value)}}">
-      <span md-suffix>m</span></md-input>
-  </div>
-</md-card>
+    </md-input>
 
-<md-card>
-  <md-card-header>Sheet Calculation</md-card-header>
-  <md-input #length type="number" placeholder="Sheet Length" align="centre">
-    <span md-suffix>mm</span>
-  </md-input>
-  <md-input #width placeholder="Sheet width" type="number" align="middle">
-    <span md-suffix>mm</span>
-  </md-input>
-  <div>
-        <md-input #Sheetresult class="output" type="number" placeholder="Number of sheets" align="middle" [readonly]="true" value="{{NumberOfSheets(result.value,width.value)}}"></md-input>
+  </md-card>
+  <md-card>
+    <md-card-header>Sheet Calculation</md-card-header>
+    <md-input #length type="number" placeholder="Sheet Length" align="centre">
 
+    </md-input>
+    <md-input #width placeholder="Sheet width" type="number" align="middle">
 
-    <img src="./app/display/SheetArea.png" alt="Sheet Area" />
-  </div>
-</md-card>
-<div>
+    </md-input>
 
+    <md-input #Sheetresult class="output" type="number" placeholder="Number of sheets" align="middle" [readonly]="true" value="{{NumberOfSheets(result.value,width.value)}}">
+    </md-input>
+       <md-input #volume class="output" type="number" placeholder="Number of sheets" align="middle" [readonly]="true" value="{{Volume(length.value,width.value,height.value,result.value)}}">
+    </md-input>
+    <img src="./app/display/SheetArea.png" class="md-media-sm" alt="Sheet Area" />
 
-</div>
+  </md-card>
+
+</md-card-content>
