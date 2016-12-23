@@ -14,35 +14,39 @@ export class DisplayComponent {
   Length: number;
   thickness: number;
   volume: number;
-width:number;
+  width: number;
 
   constructor() {
     this.result = 0;
     this.diameter = 0;
     this.core = 0;
     this.thickness = 0;
-    this.volume  = 0;
+    this.volume = 0;
     this.width = 0;
   }
   // calculates the length of peel based on diameter and thickness
   LengthCalculate(diameter, thickness, core) {
+    if (thickness) {
+      this.Length = ((Math.PI * ((Math.pow(diameter, 2) / 4) - (Math.pow(core, 2) / 4)) / thickness) / 100);
+      return this.Length.toFixed(3);
 
-    this.Length = ((Math.PI * ((Math.pow(diameter, 2) / 4) - (Math.pow(core, 2) / 4)) / thickness) / 100);
+    } else {
+      return;
+    }
 
-    return this.Length.toFixed(3);
   }
 
-NumberOfSheets(length,width){
+  NumberOfSheets(length, width) {
 
-  this.result = width/length;
-  
-  return this.result.toFixed(0);
-}
+    this.result = width / length;
 
-Volume(Length,width,Thickess,Sheetresult){
+    return this.result.toFixed(0);
+  }
 
-  this.volume = length*width;
+  Volume(Length, width, Thickess, Sheetresult) {
 
-return this.volume;
-}
+    this.volume = length * width;
+
+    return this.volume;
+  }
 }
