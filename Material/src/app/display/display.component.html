@@ -13,9 +13,6 @@
     <md-input #height placeholder="Sheet Thickess" type="number" align="middle">
 
     </md-input>
-
-    <md-input #result class="output" type="number" placeholder="Result" align="middle" [readonly]="true" value="{{LengthCalculate(diameter.value,height.value,core.value)}}">
-    </md-input>
  <h3  md-line>{{LengthCalculate(diameter.value,height.value,core.value)}}</h3>
   </md-card>
   <md-card>
@@ -27,8 +24,8 @@
 
     </md-input>
 
-    <md-input #Sheetresult class="output" type="number" placeholder="Number of sheets" align="middle" [readonly]="true" value="{{NumberOfSheets(result.value,width.value)}}">
-    </md-input>
+     <h3  md-line>{{NumberOfSheets(length.value,width.value)}}</h3>
+     
        <md-input #volume class="output" type="number" placeholder="Number of sheets" align="middle" [readonly]="true" value="{{Volume(length.value,width.value,height.value,result.value)}}">
     </md-input>
     <img src="./app/display/SheetArea.png" class="md-media-sm" alt="Sheet Area" />

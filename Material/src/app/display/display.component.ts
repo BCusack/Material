@@ -29,18 +29,19 @@ export class DisplayComponent {
     if (thickness) {
       this.Length = ((Math.PI * ((Math.pow(diameter, 2) / 4) - (Math.pow(core, 2) / 4)) / thickness) / 100);
       return this.Length.toFixed(3);
-
     } else {
       return;
     }
-
   }
 
   NumberOfSheets(length, width) {
-
-    this.result = width / length;
-
+if(width)
+{ 
+  this.result = (width * length)/100;
     return this.result.toFixed(0);
+  }else{
+    return;
+  }
   }
 
   Volume(Length, width, Thickess, Sheetresult) {
