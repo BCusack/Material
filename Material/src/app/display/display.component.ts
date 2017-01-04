@@ -7,7 +7,7 @@ import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 })
 export class DisplayComponent {
-  title = "Rolling coil calculator";
+  title = 'Rolling coil calculator';
   result: number;
   diameter: number;
   core: number;
@@ -35,9 +35,9 @@ export class DisplayComponent {
   }
 
   NumberOfSheets(length, width) {
-if(width)
+if (width)
 { 
-  this.result = (width * length)/100;
+  this.result = (width * length) / 100;
     return this.result.toFixed(0);
   }else{
     return;
