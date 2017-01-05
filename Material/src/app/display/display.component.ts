@@ -20,15 +20,15 @@ export class DisplayComponent {
     this.result = 0;
     this.diameter = 0;
     this.core = 0;
-    this.thickness = 0;
+    // this.thickness = 0;
     this.volume = 0;
     this.width = 0;
   }
   // calculates the length of peel based on diameter and thickness
   LengthCalculate(diameter, thickness, core) {
-    if (thickness) {
+    if (thickness && diameter && core) {
       this.Length = ((Math.PI * ((Math.pow(diameter, 2) / 4) - (Math.pow(core, 2) / 4)) / thickness) / 100);
-      return this.Length.toFixed(3);
+      return (this.Length.toFixed(3)) + 'm';
     } else {
       return;
     }

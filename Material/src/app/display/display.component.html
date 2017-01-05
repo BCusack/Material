@@ -1,34 +1,17 @@
 <app-toolbar></app-toolbar>
 <md-card-content class="md-padding" layout-xs="column" layout="row">
-
   <md-card>
     <md-card-header>Roll Calculation</md-card-header>
-    <md-input #diameter type="number" placeholder="Roll Diameter" align="centre">
-
-    </md-input>
-    <md-input #core placeholder="Core Diameter" type="number" align="middle">
-
-    </md-input>
-    <md-input #height placeholder="Sheet Thickess" type="number" align="middle">
-
-    </md-input>
- <h3  md-line>{{LengthCalculate(diameter.value,height.value,core.value)}}</h3>
+    <md-input #diameter type="number" placeholder="Roll Diameter" align="centre" ></md-input><span md-suffix>mm</span>
+    <md-input #core placeholder="Core Diameter" type="number" align="middle">mm</md-input><span md-suffix>mm</span>
+    <md-input #height placeholder="Sheet Thickess" type="number" align="middle"></md-input><span md-suffix>mm</span>
+    <h3 md-line>{{LengthCalculate(diameter.value,height.value,core.value)}}</h3>
   </md-card>
   <md-card>
     <md-card-header>Sheet Calculation</md-card-header>
-    <md-input #length type="number" placeholder="Sheet Length" align="centre">
-
-    </md-input>
-    <md-input #width placeholder="Sheet width" type="number" align="middle">
-
-    </md-input>
-
-     <h3  md-line>{{NumberOfSheets(length.value,width.value)}}</h3>
-     
-       <md-input #volume class="output" type="number" placeholder="Number of sheets" align="middle" [readonly]="true" value="{{Volume(length.value,width.value,height.value,result.value)}}">
-    </md-input>
-    <img src="./app/display/SheetArea.png" class="md-media-sm" alt="Sheet Area" />
-
+    <md-input #length  placeholder="Sheet Length" type="number" align="centre"></md-input><span md-suffix>mm</span>
+    <md-input #width placeholder="Sheet width" type="number" align="middle"></md-input><span md-suffix>mm</span>
+    <h3 md-line>{{NumberOfSheets(length.value,width.value)}}</h3>
+    <img  src="./app/display/SheetArea.png" class="md-media-sm" alt="Sheet Area" />
   </md-card>
-
 </md-card-content>
